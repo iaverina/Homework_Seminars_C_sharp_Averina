@@ -3,31 +3,31 @@
 
 // Asking for input from the user
 Console.Write("Enter a three-digit number: ");
-int InitialNumber = Convert.ToInt32(Console.ReadLine());
-int secondDigit = 0;
+int number = Convert.ToInt32(Console.ReadLine());
 
-// Checking whether the entered number is a thee-digit number
-int number=InitialNumber;
-int numberOfDigits = 0;
+// Checking if the number is three-digit
+int numberOfDigit=DigitNumber(number);
+if (numberOfDigit ==3)
+   {
+    int result = number / 10 % 10; 
+    Console.WriteLine("The second digit of "+ number+ " is " + result);
+   }
 
-while (number > 0)
-        {
-            int count=0;
-            number = number % 10;
-            count ++;
-            numberOfDigits = count;
-        }    
-
-//if the condition is met then we proceed to checking the second digit
-if (numberOfDigits ==3)
-{
-    secondDigit= (InitialNumber / 10 % 10);
-    Console.Write($"the second digit of {InitialNumber} is {secondDigit}");
-    return; 
-}
-
-else 
-{
-    Console.Write("the number of digits is incorrect");
+else
+   {
+    Console.WriteLine(""+ number + " is not a three-digit number!" );
     return;
+   }
+
+// Finding the second digit of the number
+   int DigitNumber (int number)// Function to find number of digit
+{
+int numberOfDigit=0;
+double buffer = number;
+while (buffer>=1)
+   {
+    buffer=buffer/10;
+    numberOfDigit++;
+   }
+return numberOfDigit;
 }
