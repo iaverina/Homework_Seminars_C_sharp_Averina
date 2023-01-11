@@ -1,4 +1,5 @@
-﻿// Задача 4: Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
+﻿// Задача 2: Напишите программу, которая на вход принимает два целых числа 
+// и выдаёт, какое число большее, а какое меньшее.
 
 // запрос первого числа от пользователя
         Console.WriteLine("Input number1: ");
@@ -8,32 +9,25 @@
         Console.WriteLine("Input number2: ");
         int number2 = Convert.ToInt32(Console.ReadLine());
 
-// запрос третьего числа от пользователя
-        Console.WriteLine("Input number3: ");
-        int number3 = Convert.ToInt32(Console.ReadLine());
-
-// ввод переменной, обозначающей максимальное числа
+// ввод переменных, обозначающих наибольшее и наименьшее числа
         int max = 0;
-
+        int min = 0;
 
 // сравнение чисел с помощью оператора ветвления
 
-    if (number1>number2 && number1>number3)
+    if (number1>number2)
         {
             max = number1;
+            min = number2;
         }
 
-    if (number2>number1 && number2>number3)
+    if (number1<number2)
     {
             max = number2;
+            min = number1;
     }
     
-    if (number3>number1 && number3>number2)
-    {
-            max = number3;
-    }
-    
-    if (number1 == number2 && number2 == number3)
+    if (number1 == number2)
     {  
             Console.WriteLine("Numbers are equal");
             return;
@@ -41,3 +35,4 @@
 
 // вывод в консоль чисел с присвоенными аттрибутами 0 наибольшего и наименьшего чисел
         Console.WriteLine($"the bigger number={max}");
+        Console.WriteLine($"the lesser number={min}");
