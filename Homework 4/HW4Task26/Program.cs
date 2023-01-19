@@ -1,4 +1,4 @@
-﻿// Задача 26: Напишите программу, которая принимает на вход число и выдаёт количество цифр в числе.
+﻿// Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 
 Console.WriteLine("Input number");
 int number = Convert.ToInt32(Console.ReadLine());
@@ -11,4 +11,12 @@ while (number/10 != 0)
     number = number / 10;
 }
 
-Console.WriteLine (digitsQuantity);
+int digitsSum = 1;
+
+    for (int i = 1; i<= digitsQuantity; i ++)
+{
+    digitsSum += number;
+}
+
+Console.WriteLine (digitsSum);
+

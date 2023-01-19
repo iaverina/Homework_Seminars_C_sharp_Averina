@@ -9,13 +9,11 @@ int B = Convert.ToInt32(Console.ReadLine());
 int i = 1;
 int product = A;
 
-if (A>0 || B>0)
-
-{
-    while (i<B)
+    while (i < B)
     { 
         i++;
-        product = product * i;
+        product = product * A;
     }
- }   
-Console.WriteLine (sum);
+ 
+ Console.WriteLine (product);
+
