@@ -1,14 +1,21 @@
-﻿// Задача 24: Напишите программу, которая принимает на вход число (А) и выдаёт сумму чисел от 1 до А.
+﻿// Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
 
 Console.WriteLine("Input A");
-
 int A = Convert.ToInt32(Console.ReadLine());
-int i = 0;
-int sum = 0;
 
-while (i<A)
-{ 
-    i++;
-    sum = sum + i;
-}
+Console.WriteLine("Input B");
+int B = Convert.ToInt32(Console.ReadLine());
+
+int i = 1;
+int product = A;
+
+if (A>0 || B>0)
+
+{
+    while (i<B)
+    { 
+        i++;
+        product = product * i;
+    }
+ }   
 Console.WriteLine (sum);
