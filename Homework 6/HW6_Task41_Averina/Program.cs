@@ -11,13 +11,14 @@
 Console.Write("Input as many integers as you like dividing them with space: ");
 int[] arr = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
 int count = 0;
+int i = 0;
  
-for (int i = 0; i < arr.Length; i++)
+for (i = 0; i < arr.Length; i++)
 {
     if (arr[i] > 0)
     {
         count++;
     }
 }
- 
-Console.WriteLine($"The number of integers > 0 = {count}");
+
+ Console.WriteLine($"The number of integers > 0 = {count}");
